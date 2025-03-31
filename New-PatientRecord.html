@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY BREATHS: Newborn Respiratory Rate Monitor</title>
+    <link rel="stylesheet" href="New-PatientRecord.css">
+</head>
+<body>
+    <script src="New-PatientRecord.js" defer></script>
+    <div class="container">
+        <div class="sidebar">
+            <div class="icons">
+                <a href="Nurse-Homepage.html"><img src="homeicon.png" alt="Home"></a>
+                <a href="#"><img src="faqsicon.png" alt="FAQs"></a>
+            </div>
+            NEW PATIENT RECORD
+        </div>
+        <div class="content">
+            <div class="title">TINY BREATHS: Newborn Respiratory Rate Monitoring</div>
+            <div class="form-section">
+                <div class="input-group"><label>Name</label><input type="text" id="name"></div>
+                <div class="input-group"><label>Sex</label>
+                    <select id="sex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="input-group"><label>Date of Birth</label><input type="datetime-local" id="dob"></div>
+                <div class="input-group"><label>Gestational Age at Birth</label>
+                    <input type="number" id="gestationalage" min="0">
+                    <select id="gestationalunit">
+                        <option value="days">Days</option>
+                        <option value="weeks">Weeks</option>
+                        <option value="months">Months</option>
+                    </select>
+                </div>
+                <div class="input-group"><label>Category</label>
+                    <select id="category">
+                        <option value="Well-Baby">Well-Baby</option>
+                        <option value="NICU">NICU</option>
+                    </select>
+                </div>
+                <div class="input-group"><label>Birth Weight (KG)</label><input type="number" id="birthweight" step="0.01"></div>
+            </div>
+            <div class="buttons">
+                <button class="btn-enroll" onclick="showPopup()">ENROLL</button>
+                <button class="btn-clear" onclick="clearFields()">CLEAR</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <h3>Enrollment Successful</h3>
+        <p id="popup-message"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</body>
+</html>

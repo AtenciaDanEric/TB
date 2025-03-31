@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINY BREATHS: Newborn Respiratory Rate Monitor</title>
+  <link rel="stylesheet" href="doctor1.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span>TINY BREATHS: Newborn Respiratory Rate Monitor</span>
+      <div class="buttons">
+        <a href="Doctor-Login.html"><img src="homeicon.png" alt="home"></a>
+        <a href="doctor-profile.html"><img id="doctor-profile-icon" src="DoctorProfileIcon.png" alt="profile"></a>
+        <img src="faqsicon.png" alt="FAQs">
+      </div>
+    </div>
+    <div class="content">
+      <div class="sidebar">
+        <div class="profile">
+          <div class="profile-icon">
+            <img src="DoctorIcon.png" alt="Doctor Icon">
+          </div>
+          <span>Welcome, Dr. [Name]!</span>
+        </div>
+        <div class="dropdown-container">
+          <label for="current-patients">Current Patients:</label>
+          <select id="current-patients" onchange="updatePatientInfo()">
+            <option value="">-- Select a Patient --</option>
+            <option value="Patient A">Patient A</option>
+            <option value="Patient B">Patient B</option>
+            <option value="Patient C">Patient C</option>
+          </select>
+        </div>
+        <div class="dropdown-container">
+          <label for="discharged-patients">Discharged Patients:</label>
+          <select id="discharged-patients" onchange="updatePatientInfo()">
+            <option value="">-- Select a Patient --</option>
+            <option value="Patient X">Patient X</option>
+            <option value="Patient Y">Patient Y</option>
+            <option value="Patient Z">Patient Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="patient-info" id="patient-info">Select a patient to view details.</div>
+        <div class="monitor-buttons">
+          <a href="Doctor-PatientsDetails.html" target="_blank">
+            <button class="action-btn">Display Info</button>
+          </a>
+          <a href="MODELS/app5.py" target="_blank">
+            <button class="action-btn">View Chart</button>
+          </a>
+        </div>
+        <div class="print-btn-container">
+          <button class="print-btn">Print</button>
+          <button class="print-btn">Print</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

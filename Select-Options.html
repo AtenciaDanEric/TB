@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY BREATHS: Newborn Respiratory Rate Monitor</title>
+    <link rel="stylesheet" href="Select-Options.css">
+    <script defer src="patient-details.js"></script>
+    <script defer src="confirmDischarge.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.png" alt="Tiny Breaths Logo" class="logo">
+        </div>
+        <div id="back-button">
+            <a href="Current-Patients.html"><img src="backicon.png" alt="Back"></a>
+        </div>
+        <div class="header-buttons">
+            <a href="Nurse-Homepage.html"><img src="homeicon.png" alt="Home"></a>
+            <img src="faqsicon.png" alt="FAQs">
+        </div>
+        
+        <div class="content">
+            <div class="title">TINY BREATHS: Newborn Respiratory Monitoring Rate</div>
+            <div class="form-title">PATIENT DETAILS</div>
+            <div class="form-section">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="patient_name" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Sex</label>
+                    <input type="text" id="patient_sex" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Date of Birth</label>
+                    <input type="text" id="patient_dob" readonly> <!-- CHANGED -->
+                </div>
+                <div class="input-group">
+                    <label>Gestational Age at Birth</label>
+                    <input type="text" id="patient_ga" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Category (Well-Baby or NICU)</label>
+                    <input type="text" id="patient_category" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Birth Weight (KG)</label>
+                    <input type="text" id="patient_weight" readonly>
+                </div>
+            </div>
+            
+            <div class="options-title">Monitor Information</div>
+            <div class="button-links">
+                <a href="Display-info.html">Display Info</a>
+                <a href="#" onclick="dischargePatient()">Discharge</a>
+                <a href="https://tinybreaths.streamlit.app">Measure RR</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <p>Confirm Discharge?</p>
+        <button onclick="confirmDischarge(true)">Yes</button>
+        <button onclick="confirmDischarge(false)">No</button>
+    </div>
+</body>
+</html>

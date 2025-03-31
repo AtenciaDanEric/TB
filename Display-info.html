@@ -1,0 +1,53 @@
+<!-- Display-Info.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY BREATHS: Newborn Respiratory Rate Monitor</title>
+    <link rel="stylesheet" href="Display-info.css">
+    <script defer src="Display-info.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-title">PATIENT MANAGEMENT</div>
+            <h3>Measure RR</h3>
+            <select id="patientSelect" onchange="loadPatientRecords()">
+                <option value="">Select Patient</option>
+            </select>
+            <button onclick="syncToMySQL()">Start Measuring RR</button>
+        </div>
+
+        <div class="back-button">
+            <a href="Select-Options.html"><img src="backicon.png" alt="Back"></a>
+        </div>
+
+        <div class="home-button">
+            <a href="Nurse-Homepage.html"><img src="homeicon.png" alt="Home"></a>
+        </div>
+
+        <div class="header-buttons">
+            <img src="faqsicon.png" alt="FAQs">
+        </div>
+
+        <div class="content">
+            <div class="title">TINY BREATHS: Newborn Respiratory Rate Monitoring</div>
+            <div class="measure-rr">View Chart</div>
+            <div class="patient-id" id="selectedPatientId">Patient ID: </div>
+            <table class="patient-table">
+                <thead>
+                    <tr>
+                        <th>Date and Time</th>
+                        <th>RR</th>
+                        <th>Diagnosis</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                    <!-- Records will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E1F5FE;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background-color: #2A2A4A;
+    width: 80%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    position: relative;
+    align-items: center;
+}
+
+.back-button {
+    position: absolute;
+    top: 3px;
+    left: 835px;
+}
+
+.back-button img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-button img:hover {
+    transform: scale(1.1);
+}
+
+.header-buttons {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    display: flex;
+    gap: 0px;
+}
+
+.header-buttons img {
+    width: 70px;
+    height: 70px;
+    filter: drop-shadow(0px 0px 5px #fff) drop-shadow(0px 0px 10px #fff);
+    transition: transform 0.3s ease-in-out;
+    margin-right: -20px;
+}
+
+.header-buttons img:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.input-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}

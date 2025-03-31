@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY BREATHS: Newborn Respiratory Rate Monitor</title>
+    <link rel="stylesheet" href="Current-Patients.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-title">PATIENT RECORD</div>
+        </div>
+        
+        <div class="header-buttons">
+            <div class="header-button back-button">
+                <a href="Nurse-Homepage.html">
+                    <img src="backicon.png" alt="Back">
+                </a>
+            </div>
+            <div class="header-button home-button">
+                <a href="Nurse-Homepage.html">
+                    <img src="homeicon.png" alt="Home">
+                </a>
+            </div>
+            <div class="header-button faqs-button">
+                <img src="faqsicon.png" alt="FAQs">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="title">TINY BREATHS: Newborn Respiratory Rate Monitoring</div>
+            
+            <div class="current-patients">
+                <h2>LIST OF PATIENTS</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search patient...">
+                    <button onclick="searchPatient()">Search</button>
+                </div>
+                <div class="filter-bar">
+                    <label for="statusFilter">Filter by status:</label>
+                    <select id="statusFilter" onchange="loadFilteredPatients()">
+                        <option value="all">All Patients</option>
+                        <option value="admitted">Admitted</option>
+                        <option value="discharged">Discharged</option>
+                    </select>
+                </div>                
+                <div class="patient-box">
+                    <ul class="patient-list" id="patientList"></ul>
+                </div>
+                <!--
+                <div class="patient-box">
+                    <ul class="patient-list" id="patientList"></ul>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <script src="searchscript.js"></script>
+</body>
+</html>
